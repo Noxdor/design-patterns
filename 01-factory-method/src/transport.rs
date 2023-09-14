@@ -5,7 +5,15 @@ pub trait Transport {
 }
 
 pub struct Truck {
-    pub costs: u32
+    costs: u32
+}
+
+impl Truck {
+    pub fn new() -> Self {
+        Self {
+            costs: 220
+        }
+    }
 }
 
 impl Transport for Truck {
@@ -18,6 +26,13 @@ impl Transport for Truck {
 }
 
 pub struct Ship;
+
+impl Ship {
+    pub fn new() -> Self {
+        Self {
+        }
+    }
+}
 
 impl Transport for Ship {
     fn deliver(&self) {
